@@ -13,7 +13,7 @@ namespace WebAPIFramework1.Controllers
         {
             return testDBEntities.Employees.ToList();
         }
-
+        //Get the Employee Details by ID
         public Employee GetEmployeeByID(int id)
         {
             return testDBEntities.Employees.Find(id);
@@ -52,6 +52,9 @@ namespace WebAPIFramework1.Controllers
             {
                 return $"The Employee with id = {Id.ToString()} does not exist";
             }
+        }
+        public void PrintDetails()
+        { 
         }
     }
 }
